@@ -10,6 +10,3 @@ window.read()
 print("hello")
 window.close()
 
-
-
-

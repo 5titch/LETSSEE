@@ -12,7 +12,7 @@ while True:
         if user_action.startswith('add'):
             todo = user_action[4:] + '\n'
 
-            todos = functions.get_t() #if used import function would call get_t() with .
+            todos = functions.get_t()
 
             todos.append(todo)
 
