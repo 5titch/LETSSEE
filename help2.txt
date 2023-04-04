@@ -1,0 +1,297 @@
+
+----------REMINDERS--------
+Do not complicate code
+
+You have to use as many variables as there are items in the internal tuples or lists.
+In the example below,
+ we iterate using three variables:
+ f string is the best for formatting
+
+ always file.clsoe() when dealing with files
+
+ file.write can be used to write in a file after calling it
+
+
+whenever a action is done  such as using a method always or when possible
+put it in a variable e.g.  splitv = v.split()
+
+
+when using functions you call it at the end by calling its name with inputs if arguments are taken
+
+
+
+when using def functions always use local variables as it may be called for various things
+
+
+''' has benefits such as printing without having to use \n or \
+
+
+BE SURE TO USE DOUBLE QUOTES WHEN APPLICABLE SINGLE QUOTE BECOMES INPORTANT WITH F STRINGS
+
+
+when an output has 2 variable it is possible to assign 2 names for each variable
+    -e.g. x = 2,3       x,y = 2,3       x gets 2 Y gets 3
+
+
+
+EVERYTHING GOES IN A VARIABLE
+----------Hacks-----------------
+
+when creating a method a new variable is always created
+using a .* when dealing with modules will get alll files fo that file type
+always remember the type of bracket to use.
+LIST=[]
+Tuple = ()
+dict = {}
+
+
+it is possible to multiply string with a number
+e.g. 'a' * 5= aaaaa
+
+
+
+\n is a break line has to be used outside a method
+
+
+if you ever want to modify the list always use list comprehension
+
+sum function should be used with the print at the end when summing numbers
+
+if possible use list comprehension instead of for loop, saves data and more professional
+
+
+
+   #   newt = [item.strip('\n') for item in todos]      #list comprehension
+
+   on output be sure to use the print function when utilising \n as if not it would print out the backslash
+
+
+
+Q1: When should I use read() and when readlines()?
+
+A: If you want to get all the text as one single string, use read().
+ If you want to get separate strings for each line, use readlines().
+
+
+when working with a function (def) when addressing local variable it is possible to refator then rename to
+rename all variable with the same name
+
+
+
+ syntax error are similiar to grammar checkers they do not go into the logic of the code.
+
+ exceptions like indexerror go intot the logic of the code
+
+
+
+must always put function in a variable in order to call it or print(functionname()) or even just functionname()
+
+
+
+when moving files if an error is encountered manually
+it is advised to use refator as it will automatically add the correct
+import address
+-----------CODE BREAKDOWN-----------------
+
+   case 'edit':
+            number = int(input('enter number of  existing todo'))
+            number = number - 1
+            new_todo = input('enter new todo)
+            todos[number] = new_todo
+with this case
+
+convert user input into int as user inputs are alwats string by default
+then grab the number in the to do list we take a way 1 as 0 is the first in
+the list
+
+we must now put the new to do in a new variable.
+then grab the number from to dos as that is where all the todos are stored and then assign
+that to the new to do.
+
+
+elements = ['a', 'b', 'c']
+print(elements(1))
+
+
+when trying to find a number in a array or a list use [] as this represents lists
+
+
+
+name = input("Enter your name: ")
+print(f"Your name is {name}.")
+
+
+f string is good for formatting
+
+
+file = open('todos2.txt', 'w' )
+
+in the code above this contacts another file in the same directory in this case it either writes to
+the file or it can read(gets the content) via 'r'
+
+
+file.writelines() is method only available for file objects
+
+file = open('todos2.txt', 'w') - this can also be used to create a file that doesnt exist already when utilizing
+'w'
+
+
+
+
+file = open(r'C:\Users\Stitch\Desktop\Back To Basics\pythonProject\todos2.txt','r')
+
+this can be used to access different files within the PC as i ran this in the python console and was able
+to get todos.txt.
+this can be used when you need to get in contact with a file outside the directory
+Be sure to actually target a file and not a folder,
+
+
+todo = input("enter a todo") + '\n'
+            file = open('todos2.txt', 'r')
+            todos = file.readlines()
+
+above is the logic for  the following
+
+            with open ('todos2.txt', 'r') as file:
+                todos = file.readlines()
+
+in verifies a argument printing a T/F
+
+
+
+
+-------------Trouble shooting---------
+when trying to use methods if it is not viable to use at the end of the code
+use first
+always () at the end of a method, if there are no arguments taken.
+
+
+section 6 bonus
+
+for c, f in zip(content,filename):
+    file = open(f'../filly/{filename}', 'w')         -----ERROR CODE---
+    file.write(content)
+
+
+for c, f in zip(content,filename):
+    file = open(f'../filly/{f}', 'w')               -----CORRECT CODE---
+    file.write(c)
+
+
+when creating a for loop within the loop be sure to use the local variable when refering to the global
+at hand
+
+
+UNRESOLVED REFRENCE = means the varibale hasnt been defined, calling before creation
+
+
+newt=[]
+
+for item in todos
+    newwy=item.strip('\n')            ----new variable to due to new method that does the main doing
+    newt.append(newwy)       --- you now append the new altered todos without the white space
+
+---------------------Functions and methods ---------------------------------
+
+The zip() function returns a zip object, which is an iterator of tuples where the first item
+ in each passed iterator is paired together, and then the second item in each passed iterator
+ are paired together
+
+f string can be used to formate certain aspects such as a dash when printing out the list/
+
+f'{} uselesstxt {}'  or '{} = {}'
+
+case when there could be multiple user inputs and outcomes.
+
+enumerate (means list of tuples) gets the indices of a list. This is a function.
+by defualt it creates multiple tuples e.g. [(),(),()]
+
+with is a context manager
+
+all is  function that returns true if all statments are true
+
+in just checks a statment should be used how > is
+
+
+continue will run the loop again it is the opposite of break
+
+Try statments can be used when if an user input may result inn an error such as syntx or exception
+
+tryb comes hand in hand with except
+
+try/except must beb used when dealing with errors
+
+
+default arguments are used when the argument is the same throughout
+
+
+when calling functions from different file what you use depends on the amount of functions you
+have
+
+if i have less it is better ti yse  - from functions import get_t, write_t
+as there is only 2
+
+if there are multiple it is better to use
+import function
+todos = function.get_t()
+
+betterto use import
+------------------Q LOGIC ---------------
+#
+
+Coding Exercise 2
+usernames = ["john 1990", "alberta1970", "magnola2000"]
+
+Extend the code above so the code prints out a list containing the number of characters
+for each username.
+
+usernames = ["john 1990", "alberta1970", "magnola2000"]
+Chars = [len(item) for item in usernames] # LEN ITEM(as in each collection of words and date) for every ITEM in usernames
+print(chars)
+
+
+
+thinks what am i doing to every item. then loop it
+
+when the variable has the same type int str etc then it is best to use list
+if this is not the case it is best to use dict
+
+--------------------- check-----------------------------
+
+
+section 8/84
+
+
+
+
+
+--------------------logic--------------
+
+when coding and want to prove something you must initially assume that ur hypothesis is incorrect
+set the value to false
+
+
+
+if you want to access information in a code ot user input such as characters ir the list use a for loop
+
+
+match case is good to check if one value is equal to one another but it cannot do complex statments
+such as if one is greater etc. for these cases use elif
+
+
+--------------------LINKS-----------------
+https://docs.python.org/3/py-modindex.html    INDEX of modules
+https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior      - function help
+
+pypi.org              CREATED modules by the community
+
+various important modules on this link such as webbrowser -
+
+
+
+------------------------Console---------
+
+to install downloaded, packages settings-python interpreter- add- import to file
+
+if above does not work go to terminal and enter pip follwod by the name e.g. pip install PySimpleGui
+if above doesnt work use pip3 or pip3.10 or .11 depending on version you have
