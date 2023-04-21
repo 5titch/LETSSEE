@@ -20,7 +20,7 @@ when using functions you call it at the end by calling its name with inputs if a
 
 
 
-when using def functions always use local variables as it may be called for various things
+when using def functions always use local variables as it may be called for various inputs
 
 
 ''' has benefits such as printing without having to use \n or \
@@ -32,9 +32,11 @@ BE SURE TO USE DOUBLE QUOTES WHEN APPLICABLE SINGLE QUOTE BECOMES INPORTANT WITH
 when an output has 2 variable it is possible to assign 2 names for each variable
     -e.g. x = 2,3       x,y = 2,3       x gets 2 Y gets 3
 
-
-
 EVERYTHING GOES IN A VARIABLE
+
+
+be sure to use windows[key].update
+    if specific window[key]. update(value=fileor  )
 ----------Hacks-----------------
 
 when creating a method a new variable is always created
@@ -193,6 +195,9 @@ for item in todos
 
 ---------------------Functions and methods ---------------------------------
 
+pathlib() is a method which is used when dealing with files such as manipulating and handling
+pathlib.path()  will get the direct path exluding subdirectories
+
 The zip() function returns a zip object, which is an iterator of tuples where the first item
  in each passed iterator is paired together, and then the second item in each passed iterator
  are paired together
@@ -236,6 +241,12 @@ import function
 todos = function.get_t()
 
 betterto use import
+
+(timout = 10)  - this will run the code every 10 miliseconds this was used in the while loop in my
+gui when dealing with the time as it would only ever update when an input was entered,
+by adding this it updated every 10 mii, this goes hand in hand with the update line,
+e.g. window['Inputbox'].update(value=values['Listbox'][0])
+
 ------------------Q LOGIC ---------------
 #
 
@@ -295,3 +306,6 @@ to install downloaded, packages settings-python interpreter- add- import to file
 
 if above does not work go to terminal and enter pip follwod by the name e.g. pip install PySimpleGui
 if above doesnt work use pip3 or pip3.10 or .11 depending on version you have
+
+when cloning code from someone elses repository to make sure all requriments are installed its important
+to use pip install -r or pip install -r FILENAMEWITHREQUIRMENTS
