@@ -1,18 +1,20 @@
 import functions
-import PySimpleGUI as sg
+import PySimpleGUI as sg  # py is known as a library
 import time
-sg.theme('LightBlue2')
+sg.theme('Black')
 
 timec = sg.Text('', key='clock')
 label = sg.Text("Type in a to-do")
 input_box =sg.InputText(tooltip="Enter todo", key = "Inputbox")
 list = sg.Listbox(values=functions.get_t(), key="Listbox", enable_events=True,
                   size=[45,10] )
-a_button = sg.Button("Add", size=8)
-e_button = sg.Button("Edit", size=8)
-c_button = sg.Button("Complete", size=8)
+a_button = sg.Button(key="Add", size=2, image_source='add.png', mouseover_colors="DarkGray",
+                     tooltip="Add a todo",)
+e_button = sg.Button("Edit", size=4)
+c_button = sg.Button(key="Complete", size=8, image_source='complete.png', mouseover_colors="DarkGray",
+                     tooltip="completed todo")
 ex_button = sg.Button("Exit", size=8)
-LAYOUT = [[timec],[label],[input_box, a_button],[list, e_button,],[c_button],[ex_button]],
+LAYOUT = [[timec],[label],[input_box, a_button],[list, e_button,c_button],[ex_button]]
 
 
 window = sg.Window('To-Do app', layout= LAYOUT, font=('helvetica', 11))
@@ -28,15 +30,18 @@ while True:
 
     match event:
         case 'Add':
-           # if values['Inputbox'] == '\n' or '':
-          #      sg.popup('enter a value')
-           # else:
+           # try:
             todos = functions.get_t()
-            newtodo = values['Inputbox'] + '\n'
-            todos.append(newtodo)
-            functions.write_t(todos)
-            window['Listbox'].update(values=todos)#FIND LISTBOX THEN UPDATE whats inside in this case values todos
-            window['Inputbox'].update(value='')
+            newtodo = str(values['Inputbox'] + '\n')    #STORE IT IN A VARIABLE
+            if newtodo == '\n' or '':
+                sg.popup("Enter a task m8")
+            else:
+                todos.append(newtodo)
+                functions.write_t(todos)
+                window['Listbox'].update(values=todos)#FIND LISTBOX THEN UPDATE whats inside in this case values todos
+                window['Inputbox'].update(value='')
+
+         #   except :
         case sg.WIN_CLOSED:
            break
         case 'Edit':
@@ -49,7 +54,7 @@ while True:
                 functions.write_t(todos) #writes in todos
                 window['Listbox'].update(values=todos) #updates
             except IndexError:
-                sg.popup('select a value to edit')
+                sg.popup('select a value to edit then change')
 
         case 'Listbox':
             window['Inputbox'].update(value=values['Listbox'][0])
