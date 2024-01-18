@@ -15,4 +15,4 @@ def write_t(todos_a, filepath=FILEPATH):
 
 print(f'{__name__} Has been imported')
 if __name__ == '__main__':
-    print('running directly from functions ')
+    print('running directly from functions  ')
