@@ -7,7 +7,7 @@ timec = sg.Text('', key='clock')
 label = sg.Text("Type in a to-do")
 input_box =sg.InputText(tooltip="Enter todo", key = "Inputbox")
 list = sg.Listbox(values=functions.get_t(), key="Listbox", enable_events=True,
-                  size=[45,10] )
+                  size=[45,10])
 a_button = sg.Button(key="Add", size=2, image_source='add.png', mouseover_colors="DarkGray",
                      tooltip="Add a todo",)
 e_button = sg.Button("Edit", size=4)

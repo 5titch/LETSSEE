@@ -264,6 +264,11 @@ gui when dealing with the time as it would only ever update when an input was en
 by adding this it updated every 10 mii, this goes hand in hand with the update line,
 e.g. window['Inputbox'].update(value=values['Listbox'][0])
 
+
+
+
+enumerate =   it gives an index to each item
+
 ------------------Q LOGIC ---------------
 #
 
