@@ -3,10 +3,15 @@ def get_t(filepath=FILEPATH):
     '''opens and reads the filepath in this case todos2 and thes stores in varianble in this
     case file_l. then stores in todos_l then returns the content
     '''
-    with open(filepath, 'r') as file_l:
-        todos_l = file_l.readlines()
-    return todos_l
+    try:
+        with open(filepath, 'r') as file_l:
+            todos_l = file_l.readlines()
+        return todos_l
 
+    except FileNotFoundError as e:
+        print(f"problem with{e}")
+        print(f"problem{filepath}")
+        return None
 
 def write_t(todos_a, filepath=FILEPATH):
     with open(filepath, 'w') as file:
