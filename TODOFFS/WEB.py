@@ -26,10 +26,7 @@ for i, todo in enumerate(todos):                   # for every item in toodo enu
 
 st.text_input(label="", placeholder="Add new task", on_change=add_todo, key="IT" )  # Label is part if this function
 
-print("hello")
-st.session_state
 
-print("yh  ")
 
 
 #link
