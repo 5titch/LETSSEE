@@ -1,4 +1,4 @@
-FILEPATH = "TODOFFS/todos3.txt"
+FILEPATH = "todos3.txt"
 def get_t(filepath=FILEPATH):
     '''opens and reads the filepath in this case todos2 and thes stores in varianble in this
     case file_l. then stores in todos_l then returns the content
