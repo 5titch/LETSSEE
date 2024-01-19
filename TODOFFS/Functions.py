@@ -9,8 +9,8 @@ def get_t(filepath=FILEPATH):
         return todos_l
 
     except FileNotFoundError as e:
-        print(f"problem with{e}")
-        print(f"problem{filepath}")
+        print(f"problem with{e}")                   #With this modification, if the file specified in filepath does not exist, the function will catch the
+        print(f"problem{filepath}")                    # FileNotFoundError, print information about the error, and return None.
         return None
 
 def write_t(todos_a, filepath=FILEPATH):
