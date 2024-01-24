@@ -9,7 +9,7 @@ def add_todo():
 todos = Functions.get_t()
 
 
-st.title("To Do list")
+st.title("To Doo list")
 st.subheader("Pattern your life")
 st.write("This app is created to better your life")
 

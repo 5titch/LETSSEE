@@ -16,6 +16,5 @@ lemur
 alpha
 delta
 san
-siro
 milan
 hezi
